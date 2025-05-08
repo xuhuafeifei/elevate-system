@@ -60,9 +60,6 @@ public class RunningSystem {
         }).start();
     }
 
-    /**
-     * 模拟 sleep 方法（Java 中使用 Thread.sleep）
-     */
     private void sleep(long millis) {
         try {
             Thread.sleep(millis);

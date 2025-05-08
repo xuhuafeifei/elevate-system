@@ -39,6 +39,7 @@ public class PositionManager {
     }
     /**
      * 插入请求
+     * 插入算法 + 颜色判别
      * @param request 楼层请求对象
      */
     public void insert(FloorRequest request) {
