@@ -1,7 +1,6 @@
 import { Constants } from './Constants.js';
 
-class RunningSystem {
-
+export class RunningSystem {
     constructor(eventBus) {
         this.runningStatus = Constants.RUNNING_STATUS_STOPPED;
         this.currentFloor  = 0;
@@ -49,6 +48,9 @@ class RunningSystem {
             while (!this.renderDone) {
                 await sleep(100);
             }
+            // TODO: 是否需要考虑停靠时, 用户进入电梯的动画?
+            // 为了简化设计, 固定暂停2s
+            await sleep(2000);
         }
     }
 }

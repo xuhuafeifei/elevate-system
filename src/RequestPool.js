@@ -1,6 +1,6 @@
 import { Constants } from "./Constants.js";
 
-class RequestPool {
+export class RequestPool {
     constructor(eventBus) {
         this.lock = new SimpleLock();
         this.pool = new Set();

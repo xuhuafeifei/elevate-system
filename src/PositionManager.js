@@ -1,4 +1,4 @@
-class PositionManager {
+export class PositionManager {
 
     constructor(eventBus) {
         this.eventBus = eventBus;
