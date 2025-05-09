@@ -1,5 +1,7 @@
 package com.example.demo.elevator;
 
+import com.example.demo.controller.MyWebSocketHandler;
+import com.example.demo.entity.Response;
 import com.example.demo.utils.Constants;
 import java.util.Objects;
 import java.util.concurrent.CompletableFuture;
@@ -41,6 +43,7 @@ public class RunningSystem {
 
                 // 控制前端运行
                 // todo: 引入websocket, 通知前端电梯移动到下一站
+                MyWebSocketHandler.broadcast(Response.toJson(next, Constants.ELEVATOR_MOVING_TO_NEXT));
                 // eventBus.emit(Constants.ELEVATOR_MOVING_TO_NEXT, next);
 
                 // 等待前端渲染完成

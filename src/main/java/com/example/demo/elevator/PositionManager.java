@@ -118,18 +118,4 @@ public class PositionManager {
             lock.unlock();
         }
     }
-
-    /**
-     * 从请求中提取楼层ID（模拟方法）
-     * 实际中根据你的请求结构替换此方法
-     */
-    private Integer getFloorIdFromRequest(Object request) {
-        if (request instanceof FloorRequest) {
-            return ((FloorRequest) request).floorId();
-        } else if (request instanceof Integer) {
-            return (Integer) request;
-        }
-        return null;
-    }
-
 }
